@@ -1,9 +1,10 @@
 import BusinessCard from "./BusinessCard";
+import Projects from "./Projects";
 import tecnologies from "../utils/tecnologies";
 import { useState } from "react";
 
 export default function Main({ menu }) {
-    const [tecnologie, setTecnologie] = useState({infos:{knowledg:[]}});
+    const [tecnologie, setTecnologie] = useState({ infos: { knowledg: [] } });
 
     const mouseclickCardTecItem = (e) => {
 
@@ -28,7 +29,13 @@ export default function Main({ menu }) {
                     />
 
                 )}
-                {menu[1] && 'Projetos'}
+                {menu[1] && (
+
+                    <Projects 
+                        side="left"
+                    />
+
+                )}
                 {menu[2] && 'Experiência'}
 
             </aside>
