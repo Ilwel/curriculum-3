@@ -21,7 +21,7 @@ const projects = [
         tags:[
             
             {name:'C', tag:'c'},
-            {name:'Data', tag:'c'},
+            {name:'Data Structured', tag:'c'},
         ],
         link:'https://github.com/Ilwel/listaEncadeadaC',
 

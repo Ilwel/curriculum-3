@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [menu, setMenu] = useState([false, false, false]);
+  const [menu, setMenu] = useState([true, false, false]);
 
   const menuRender = (e) => {
 

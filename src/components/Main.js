@@ -1,17 +1,26 @@
 import BusinessCard from "./BusinessCard";
 import Projects from "./Projects";
 import tecnologies from "../utils/tecnologies";
+import projects from "../utils/projects";
 import { useState } from "react";
 
 export default function Main({ menu }) {
     const [tecnologie, setTecnologie] = useState({ infos: { knowledg: [] } });
+    const [project, setProject] = useState({});
 
-    const mouseclickCardTecItem = (e) => {
+    const mouseClickCardTecItem = (e) => {
 
         const { target: { id } } = e;
         const newTecnologie = tecnologies.find(item => item.tag === id);
         setTecnologie(newTecnologie);
-        console.log(tecnologie.name)
+
+    }
+
+    const mouseClickProject = (e) => {
+
+        const { target: { id } } = e;
+        const newProject = projects.find(item => item.tag === id);
+        setTecnologie(newProject);
 
     }
 
@@ -25,7 +34,7 @@ export default function Main({ menu }) {
                     <BusinessCard
                         side="left"
                         tecnologie={tecnologie}
-                        mouseclickCardTecItem={mouseclickCardTecItem}
+                        mouseClickCardTecItem={mouseClickCardTecItem}
                     />
 
                 )}
@@ -46,10 +55,14 @@ export default function Main({ menu }) {
                     <BusinessCard
                         side="right"
                         tecnologie={tecnologie}
-                        mouseclickCardTecItem={mouseclickCardTecItem}
+                        mouseClickCardTecItem={mouseClickCardTecItem}
                     />
                 )}
-                {menu[1] && 'Projetos'}
+                {menu[1] && (
+                    <Projects 
+                        side="right"
+                    />
+                )}
                 {menu[2] && 'Experiência'}
 
             </aside>

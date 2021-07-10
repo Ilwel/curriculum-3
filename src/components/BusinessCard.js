@@ -1,11 +1,14 @@
 import tecnologies from "../utils/tecnologies";
 import perfil from '../assets/perfil.jpg';
 
-export default function BusinessCard({ side, tecnologie, mouseclickCardTecItem }) {
+export default function BusinessCard({ side, tecnologie, mouseClickCardTecItem }) {
 
     const { infos } = tecnologie;
 
     const mouseOverCardTecItem = (e) => {
+
+        const isCard = e.target.classList.contains('c-card__tec-item');
+        if(!isCard) return;
 
         e.target.classList.add("is-hover");
         const items = document.getElementsByClassName("c-card__tec-item");
@@ -18,6 +21,9 @@ export default function BusinessCard({ side, tecnologie, mouseclickCardTecItem }
 
     }
     const mouseLeaveCardTecItem = (e) => {
+
+        const isCard = e.target.classList.contains('c-card__tec-item');
+        if(!isCard) return;
 
         e.target.classList.remove("is-hover");
         const items = document.getElementsByClassName("c-card__tec-item");
@@ -77,9 +83,10 @@ export default function BusinessCard({ side, tecnologie, mouseclickCardTecItem }
                         {tecnologies.map(item =>
                             <span
                                 id={item.tag}
+                                key={item.tag}
                                 onMouseOver={e => mouseOverCardTecItem(e)}
                                 onMouseLeave={e => mouseLeaveCardTecItem(e)}
-                                onClick={e => mouseclickCardTecItem(e)}
+                                onClick={e => mouseClickCardTecItem(e)}
                                 className={`c-card__tec-item ${item.tag}`}>
 
                                 {item.name}

@@ -4,13 +4,14 @@ export default function Projects({ side }) {
 
     const mouseOverCard = (e) => {
         
-        e.stopPropagation();
+        const isCard = e.target.classList.contains('c-card');
+        if(!isCard) return;
+
         e.target.classList.add("is-hover");
         const items = document.getElementsByClassName("c-card");
         for (const item of items) {
 
             item.classList.add("is-blur");
-            console.log(item);
 
         }
         e.target.classList.remove("is-blur");
@@ -18,8 +19,10 @@ export default function Projects({ side }) {
 
     }
     const mouseLeaveCard = (e) => {
+        
+        const isCard = e.target.classList.contains('c-card');
+        if(!isCard) return;
 
-        e.stopPropagation();
         e.target.classList.remove("is-hover");
         const items = document.getElementsByClassName("c-card");
         for (const item of items) {
@@ -40,7 +43,8 @@ export default function Projects({ side }) {
                     {projects.map(item =>
 
                         <div
-                            key={item.name} 
+                            key={item.name}
+                            id={item.name}
                             className="c-card"
                             onMouseOver={mouseOverCard}
                             onMouseLeave={mouseLeaveCard}
@@ -50,7 +54,7 @@ export default function Projects({ side }) {
 
                                 {item.tags.map(subItem =>
                                     
-                                    <p className="c-card__tag">
+                                    <p key={subItem.name + item.name} className="c-card__tag">
                                         {subItem.name}
                                     </p>
                                 
@@ -63,8 +67,12 @@ export default function Projects({ side }) {
                     )}
                 </div>
 
+            )}
 
-
+            {side === "right" && (
+                <div className="c-card">
+                    Alguma coisa aqui
+                </div>
             )}
 
 

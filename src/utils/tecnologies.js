@@ -8,7 +8,7 @@ export default [
             knowledg:[
                 { name:"Sintaxe geral da linguagem", expertise: "80%" },
                 { name:"Callbacks", expertise: "75%" },
-                { name:"Tipagem e declaração de variáveis", expertise: "100%" },
+                { name:"Declaração de variáveis", expertise: "100%" },
                 { name:"Function statemets", expertise: "80%" },
                 { name:"Classes and Objects", expertise: "70%" },
                 { name:"Promisses", expertise: "75%" },
