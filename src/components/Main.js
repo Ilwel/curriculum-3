@@ -18,9 +18,9 @@ export default function Main({ menu }) {
 
     const mouseClickProject = (e) => {
 
-        const { target: { id } } = e;
+        const { currentTarget: { id } } = e;
         const newProject = projects.find(item => item.tag === id);
-        setTecnologie(newProject);
+        setProject(newProject);
 
     }
 
@@ -42,6 +42,8 @@ export default function Main({ menu }) {
 
                     <Projects 
                         side="left"
+                        project={project}
+                        mouseClickProject={mouseClickProject}
                     />
 
                 )}
@@ -61,6 +63,8 @@ export default function Main({ menu }) {
                 {menu[1] && (
                     <Projects 
                         side="right"
+                        project={project}
+                        mouseClickProject={mouseClickProject}
                     />
                 )}
                 {menu[2] && 'Experiência'}
