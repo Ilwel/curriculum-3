@@ -1,5 +1,4 @@
-
-export default [
+const tecnologies = [
     {
         name: "Javascript",
         tag: "js",
@@ -85,3 +84,5 @@ export default [
     },
 
 ]
+
+export default tecnologies;
