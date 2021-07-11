@@ -3,7 +3,7 @@ const tecnologies = [
         name: "Javascript",
         tag: "js",
         infos: {
-            about:"Javascript é a linguagem que me possibilitou aprender de forma rápida como desenvolver para web. Foquei em estender as especificidades da linguagem para tirar todo potencial dela",
+            about:"Javascript é a linguagem que me possibilitou aprender de forma rápida como desenvolver para web. Foquei em entender as especificidades da linguagem para tirar todo potencial dela",
             knowledg:[
                 { name:"Sintaxe geral da linguagem", expertise: "80%" },
                 { name:"Callbacks", expertise: "75%" },
@@ -46,7 +46,7 @@ const tecnologies = [
         name: "C++", 
         tag: "cplus",
         infos: {
-            about:"C foi a linguagem com a qual eu aprendi a programar. C++ me ajudou a complementar várioss conhecimentos fundamentais em lógica de programação",
+            about:"C foi a linguagem com a qual eu aprendi a programar. C++ me ajudou a complementar vários conhecimentos fundamentais em lógica de programação",
             knowledg:[
                 { name:"Sintaxe geral da linguagem", expertise: "80%" },
                 { name:"Manipulação e alocação de memória", expertise: "70%" },
