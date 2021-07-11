@@ -230,7 +230,7 @@
 
 }
 
-.c-card__tec .is-hover, .c-projects .is-hover{
+.c-card__tec .is-hover, .c-projects .is-hover, .c-experience .is-hover{
 
   transform: scale(1.2);
   background-color: white;
@@ -238,7 +238,7 @@
 
 }
 
-.c-card__tec .is-blur, .c-projects .is-blur{
+.c-card__tec .is-blur, .c-projects .is-blur, .c-experience .is-blur{
 
   transform: scale(0.9);
   filter: blur(0.1rem);
@@ -397,10 +397,10 @@
 
 .c-project-info{
 
-  height: 100%;
+  height: 70%;
   display: flex;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 20%;
   text-align: center;
 
 }
@@ -409,5 +409,66 @@
 
   font-size: 1.4rem;
   color: black;
+
+}
+
+/* -- experience styles -- */
+
+.c-card__options{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.c-experience{
+
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 0.8fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2rem;
+
+
+}
+
+.c-experience .c-card{
+
+  animation: none;
+  transition: 1s;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.c-experience .c-card__title{
+
+  font-size: 1.2rem;
+  
+
+}
+
+.c-experience .c-card__p{
+
+  font-weight: 400;
+
+}
+
+.c-experience-info{
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+
+}
+
+.c-experience-info .c-card__sub{
+
+  margin-top: 7rem;
+  text-align: center;
 
 }
