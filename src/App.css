@@ -475,7 +475,7 @@
   :root{
 
     font-size: 50%;
-    background-color: black;
+    background-color: white;
 
   }
 
@@ -487,7 +487,13 @@
 
   }
 
-  .l-header .c-social__item{
+  .l-header .c-menu{
+
+    color: black;
+
+  }
+
+  /* .l-header .c-social__item{
 
     color: white;
     
@@ -497,18 +503,32 @@
 
     color: white;
 
-  }
+  } */
 
-  .c-card .c-card__progress-bar{
+  /* .c-card .c-card__progress-bar{
 
     background-color: white;
 
+  } */
+
+  .c-card__tec-item{
+
+    border-color: black;
+
   }
 
-  .c-content .c-card{
+  .c-hero .c-card{
 
+    color: black;
+    border-color: black;
+
+  }
+
+  .c-card__tec .is-hover, .c-projects .is-hover, .c-experience .is-hover{
+
+    background-color: black;
     color: white;
-
+  
   }
 
   .l-header .c-menu{
@@ -523,9 +543,9 @@
 
   }
 
-  .l-header .c-social__item::after, .c-card__see-more::after{
+  .l-header .c-menu__item::after{
 
-    border-color: white;
+    border-color: black;
 
   }
 
